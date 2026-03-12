@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="day">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,190 +8,164 @@
 </head>
 <body>
 
-  <nav>
-    <div class="nav-inner">
-      <span class="nav-name">Claire Phillips</span>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <header id="about">
-    <div class="header-content">
-      <h1>Claire Phillips</h1>
-      <p class="subtitle">MBA Candidate · Data Scientist · Engineer</p>
-      <p class="location">Evanston, IL</p>
-      <div class="contact-links">
-        <a href="mailto:claire.phillips@kellogg.northwestern.edu">claire.phillips@kellogg.northwestern.edu</a>
-        <span class="divider">·</span>
-        <a href="tel:+12892187915">(289) 218-7915</a>
-      </div>
-      <p class="intro">
-        I'm a strategy and finance MBA student at Kellogg (Northwestern) with a background in
-        data science and computer engineering. I thrive at the intersection of technology and
-        business — from building AI models at HSBC to consulting on pricing strategy at BCG.
-        Outside of work, you'll find me training for triathlons or hacking on side projects.
-      </p>
-    </div>
-  </header>
-
   <main>
+    <div class="resume">
 
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <h2>Experience</h2>
+      <!-- ── Header ── -->
+      <header class="r-header">
+        <h1>CLAIRE PHILLIPS</h1>
+        <p class="contact">
+          Evanston, IL &nbsp;|&nbsp; (289) 218-7915 &nbsp;|&nbsp;
+          <a href="mailto:claire.phillips@kellogg.northwestern.edu">claire.phillips@kellogg.northwestern.edu</a>
+        </p>
+      </header>
 
-      <div class="card">
-        <div class="card-header">
-          <div>
-            <h3>Boston Consulting Group (BCG)</h3>
-            <p class="role">Summer Consultant – Tech &amp; Digital Advantage</p>
+      <hr />
+
+      <!-- ── Education ── -->
+      <section>
+        <h2>Education</h2>
+
+        <div class="entry">
+          <div class="entry-head">
+            <div class="entry-left">
+              <strong><span class="kw" data-popup="kellogg">Kellogg School of Management</span>, Northwestern University</strong>
+              <div class="role">Candidate for Master of Business Administration, June 2026</div>
+            </div>
+            <div class="entry-right">
+              <span>2024–Present</span>
+              <span>Evanston, IL</span>
+            </div>
           </div>
-          <div class="meta">
-            <span class="date">2025</span>
-            <span class="location-tag">San Francisco, CA</span>
-          </div>
+          <ul>
+            <li>Major: Finance, Strategy</li>
+            <li>Leadership: <span class="kw" data-popup="dac">Data Analytics Club</span> (Co-President)</li>
+            <li>In-quarter Internships: VC MBA Intern with <span class="kw" data-popup="thomvest">Thomvest Ventures</span></li>
+          </ul>
         </div>
-        <ul>
-          <li>Created a framework for competitive pricing methodology for a Quick Service Restaurant client.</li>
-          <li>Built a proof-of-concept dashboard to help the client's pricing team visualize their pricing architecture and respond to competitor pricing in real time.</li>
+
+        <div class="entry">
+          <div class="entry-head">
+            <div class="entry-left">
+              <strong>University of Toronto</strong>
+              <div class="role">Master of Engineering</div>
+            </div>
+            <div class="entry-right">
+              <span>2023–2024</span>
+              <span>Toronto, Canada</span>
+            </div>
+          </div>
+          <ul>
+            <li>Major: Computer Engineering; Specialization: Data Analytics</li>
+            <li>Leadership: Teaching Assistant for Calculus 3</li>
+            <li><span class="kw" data-popup="ieee">Published in IEEE</span>: <em>MARL to Choose Actions On-the-Fly in a Cognitive Radar System</em></li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <div class="entry-left">
+              <strong>Queen's University</strong>
+              <div class="role">Bachelor of Applied Science</div>
+            </div>
+            <div class="entry-right">
+              <span>2016–2020</span>
+              <span>Kingston, Canada</span>
+            </div>
+          </div>
+          <ul>
+            <li>Major: Applied Mathematics and Computer Engineering</li>
+            <li>Leadership: Engineering Sustainability Team (Executive Web Master), Orientation Leader, Peer Mentor</li>
+          </ul>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- ── Experience ── -->
+      <section>
+        <h2>Experience</h2>
+
+        <div class="entry">
+          <div class="entry-head">
+            <div class="entry-left">
+              <strong><span class="kw" data-popup="bcg">BCG</span></strong>
+              <div class="role">Summer Consultant &ndash; Tech &amp; Digital Advantage</div>
+            </div>
+            <div class="entry-right">
+              <span>2025</span>
+              <span>San Francisco, CA</span>
+            </div>
+          </div>
+          <ul>
+            <li>Created a framework for competitive pricing methodology for a Quick Service Restaurant</li>
+            <li>Built a <span class="kw" data-popup="pricingdash">proof-of-concept pricing dashboard</span> to help the client's pricing team visualize their pricing architecture and respond to competitor pricing</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <div class="entry-left">
+              <strong>HSBC</strong>
+              <div class="role">Data Scientist</div>
+            </div>
+            <div class="entry-right">
+              <span>2022–2023</span>
+              <span>Toronto, Canada</span>
+            </div>
+          </div>
+          <ul>
+            <li>Increased the accuracy of an AI model by over 50%, enabling 300 front-line bankers to assess client portfolios worth $50M+ held with competing banks</li>
+            <li>Researched and analyzed 20+ third-party <span class="kw" data-popup="esg">ESG</span> data providers to identify gaps, differences and trends, leading to the selection of 5 critical services facilitating multimillion-dollar investment decisions</li>
+            <li>Customized an existing data pipeline tool and presented data stories to senior managers, resulting in <span class="kw" data-popup="savings200k">annual savings of $200K</span></li>
+            <li>Created a proof-of-concept scorecard to assess ESG risks of commercial clients, leading to the deployment of a risk framework for green-loan regulatory compliance</li>
+            <li>Led the design and development of mapping tools that standardized data usage across the global data science team, improving model accuracy and reducing average project lead time by one month</li>
+            <li>Identified issues with outmoded industry code usage and implemented a strategy to transition frontline bankers to up-to-date codes</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <div class="entry-left">
+              <strong>HSBC</strong>
+              <div class="role">Data Engineer</div>
+            </div>
+            <div class="entry-right">
+              <span>2021–2022</span>
+              <span>Toronto, Canada</span>
+            </div>
+          </div>
+          <ul>
+            <li>Designed and implemented an algorithm that resolved HSBC clients to external data with <span class="kw" data-popup="algo">90%+ accuracy</span>, eliminating external vendors and saving $200K+ annually</li>
+            <li>Spearheaded the first data pipeline from the HSBC Toronto Innovation Lab into production, delivering the first internal view of environmental risk for 2,000+ commercial clients</li>
+            <li>Grew a cross-functional global data engineering team 8&times; to deliver a rapidly changing pipeline on time and on budget</li>
+            <li>Implemented a graduate mentorship program for data scientists, achieving a 100% retention rate</li>
+          </ul>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- ── Additional ── -->
+      <section>
+        <h2>Additional</h2>
+        <ul class="flat-list">
+          <li><strong>Awards:</strong> Won first place in the <span class="kw" data-popup="hackathon">Kellogg AI Club's inaugural AI hackathon</span></li>
+          <li><strong>Hobbies:</strong> <span class="kw" data-popup="triathlon">Triathlons</span>; marathons; dance; hobbyist developer (<span class="kw" data-popup="iot">AI agents and IoT devices</span>)</li>
+          <li><strong>Technical Certifications:</strong> Business Certificate – Queen's University; Deep Learning Certificate – Coursera; Data Engineering, Big Data &amp; ML on GCP – Coursera</li>
+          <li><strong>Technical Skills:</strong> Python, SQL; Tableau, PowerBI; Jira, Monday.com</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="card">
-        <div class="card-header">
-          <div>
-            <h3>HSBC</h3>
-            <p class="role">Data Scientist <span class="date-inline">2022 – 2023</span></p>
-          </div>
-          <div class="meta">
-            <span class="date">2021 – 2023</span>
-            <span class="location-tag">Toronto, Canada</span>
-          </div>
-        </div>
-        <ul>
-          <li>Improved an AI model's accuracy by <strong>50%+</strong>, enabling 300 front-line bankers to assess the value of client portfolios worth $50M+ held with competing banks.</li>
-          <li>Evaluated 20+ third-party ESG data providers to identify gaps and trends, leading to the selection of 5 critical services that facilitated multimillion-dollar investment decisions.</li>
-          <li>Customized data pipeline tooling and delivered data stories to senior managers, generating <strong>$200K in annual savings</strong>.</li>
-          <li>Built a proof-of-concept scorecard for ESG risk assessment of commercial clients, leading to a risk framework for green-loan regulatory compliance.</li>
-          <li>Led design of mapping tools that standardized data usage across the global data science team, improving model accuracy and reducing average project lead time by one month.</li>
-        </ul>
-        <p class="role sub-role">Data Engineer <span class="date-inline">2021 – 2022</span></p>
-        <ul>
-          <li>Designed and implemented an algorithm resolving HSBC clients to external data at <strong>90%+ accuracy</strong>, eliminating external vendors and saving <strong>$200K+ annually</strong>.</li>
-          <li>Spearheaded the first data pipeline from the HSBC Toronto Innovation Lab into production, delivering the first internal view of environmental risk for 2,000+ commercial clients.</li>
-          <li>Grew a cross-functional data engineering team <strong>8x</strong> by onboarding engineers globally and delivering a rapidly changing pipeline on time and on budget.</li>
-          <li>Launched a graduate mentorship program for data scientists, achieving a <strong>100% retention rate</strong>.</li>
-        </ul>
-      </div>
-
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education">
-      <h2>Education</h2>
-
-      <div class="card">
-        <div class="card-header">
-          <div>
-            <h3>Kellogg School of Management, Northwestern University</h3>
-            <p class="role">Master of Business Administration · Finance &amp; Strategy</p>
-          </div>
-          <div class="meta">
-            <span class="date">2024 – 2026</span>
-            <span class="location-tag">Evanston, IL</span>
-          </div>
-        </div>
-        <ul>
-          <li>Co-President, Data Analytics Club</li>
-          <li>VC MBA Intern with Thomvest Ventures (in-quarter internship)</li>
-          <li>Won <strong>1st place</strong> in the Kellogg AI Club's inaugural AI hackathon</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <div>
-            <h3>University of Toronto</h3>
-            <p class="role">Master of Engineering · Computer Engineering (Data Analytics)</p>
-          </div>
-          <div class="meta">
-            <span class="date">2023 – 2024</span>
-            <span class="location-tag">Toronto, Canada</span>
-          </div>
-        </div>
-        <ul>
-          <li>Teaching Assistant for Calculus 3</li>
-          <li>Published in IEEE: <em>MARL to Choose Actions On-the-Fly in a Cognitive Radar System</em></li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <div>
-            <h3>Queen's University</h3>
-            <p class="role">Bachelor of Applied Science · Applied Mathematics &amp; Computer Engineering</p>
-          </div>
-          <div class="meta">
-            <span class="date">2016 – 2020</span>
-            <span class="location-tag">Kingston, Canada</span>
-          </div>
-        </div>
-        <ul>
-          <li>Executive Web Master, Engineering Sustainability Team</li>
-          <li>Orientation Leader &amp; Peer Mentor</li>
-        </ul>
-      </div>
-
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
-      <h2>Skills &amp; Interests</h2>
-
-      <div class="skills-grid">
-        <div class="skill-block">
-          <h4>Technical</h4>
-          <div class="tags">
-            <span>Python</span>
-            <span>SQL</span>
-            <span>Tableau</span>
-            <span>Power BI</span>
-            <span>Jira</span>
-            <span>Monday.com</span>
-          </div>
-        </div>
-        <div class="skill-block">
-          <h4>Certifications</h4>
-          <div class="tags">
-            <span>Business Certificate – Queen's University</span>
-            <span>Deep Learning – Coursera</span>
-            <span>Data Engineering, Big Data &amp; ML on GCP – Coursera</span>
-          </div>
-        </div>
-        <div class="skill-block">
-          <h4>Interests</h4>
-          <div class="tags">
-            <span>Triathlons</span>
-            <span>Marathons</span>
-            <span>Dance</span>
-            <span>AI Agents</span>
-            <span>IoT Devices</span>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
+    </div><!-- /.resume -->
   </main>
 
-  <footer>
-    <p>© 2026 Claire Phillips · <a href="mailto:claire.phillips@kellogg.northwestern.edu">claire.phillips@kellogg.northwestern.edu</a></p>
-  </footer>
+  <!-- Popup card -->
+  <div class="popup" id="popup" role="tooltip" aria-live="polite">
+    <p class="popup-title" id="popup-title"></p>
+    <p class="popup-body" id="popup-body"></p>
+  </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
