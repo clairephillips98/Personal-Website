@@ -2,116 +2,150 @@
 // Day: 7 am – 7 pm  |  Night: 7 pm – 7 am
 
 function applyTheme() {
-  const hour = new Date().getHours();
+  const h = new Date().getHours();
   document.documentElement.setAttribute(
     'data-theme',
-    hour >= 7 && hour < 19 ? 'day' : 'night'
+    h >= 7 && h < 19 ? 'day' : 'night'
   );
 }
 
 applyTheme();
-setInterval(applyTheme, 5 * 60 * 1000); // re-check every 5 minutes
+setInterval(applyTheme, 5 * 60 * 1000);
 
 
 // ─── Popup content ────────────────────────────────────────────────────────────
 
 const POPUPS = {
-  kellogg: {
-    title: 'Kellogg School of Management',
-    body:  'Ranked among the world\'s top business schools, Kellogg at Northwestern is celebrated for its collaborative culture and strengths in finance, strategy, and marketing. Claire graduates in June 2026 with an MBA focusing on Finance and Strategy.'
+
+  education: {
+    icon: '🎓',
+    title: 'Education',
+    html: `
+      <div class="edu-item">
+        <div class="edu-school">Kellogg School of Management, Northwestern</div>
+        <div class="edu-degree">MBA &middot; Finance &amp; Strategy &middot; 2024–2026</div>
+        <div class="edu-note">Co-President, Data Analytics Club &middot; VC Intern at Thomvest Ventures</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-school">University of Toronto</div>
+        <div class="edu-degree">MEng &middot; Computer Engineering &middot; 2023–2024</div>
+        <div class="edu-note">Teaching Assistant for Calculus 3 &middot; Published in IEEE</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-school">Queen's University</div>
+        <div class="edu-degree">BASc &middot; Applied Math &amp; Computer Engineering &middot; 2016–2020</div>
+        <div class="edu-note">Engineering Sustainability Team &middot; Orientation Leader &middot; Peer Mentor</div>
+      </div>`
   },
-  dac: {
-    title: 'Data Analytics Club — Co-President',
-    body:  'As Co-President, Claire leads one of Kellogg\'s most active student organizations, organising speaker series, hands-on workshops, and cross-functional projects that connect MBA students with data-driven decision making.'
+
+  tech: {
+    icon: '🔌',
+    title: 'Tech & Engineering',
+    html: `
+      <p>Computer engineering background spanning data pipelines, machine learning, and cloud infrastructure.</p>
+      <ul>
+        <li><strong>Languages:</strong> Python, SQL</li>
+        <li><strong>Visualisation:</strong> Tableau, PowerBI</li>
+        <li><strong>Cloud:</strong> Google Cloud Platform (GCP)</li>
+        <li><strong>Project tools:</strong> Jira, Monday.com</li>
+        <li><strong>Certifications:</strong> Deep Learning (Coursera) &middot; Data Engineering, Big Data &amp; ML on GCP (Coursera) &middot; Business Certificate (Queen's)</li>
+      </ul>`
   },
-  thomvest: {
-    title: 'Thomvest Ventures',
-    body:  'A San Francisco-based early-stage VC firm with over $1B AUM, focused on fintech, enterprise software, and cybersecurity. As an in-quarter MBA intern, Claire gained hands-on experience evaluating deals and supporting portfolio companies.'
-  },
-  ieee: {
-    title: 'IEEE Publication — Cognitive Radar',
-    body:  'Published research on applying Multi-Agent Reinforcement Learning (MARL) to cognitive radar systems. Cognitive radars adapt their waveforms in real time; MARL enables each radar agent to choose optimal actions on-the-fly in complex, contested environments.'
-  },
-  bcg: {
-    title: 'Boston Consulting Group',
-    body:  'One of the world\'s top three management consulting firms (the "MBB" trio). Claire joined BCG\'s Tech & Digital Advantage practice, which helps clients leverage technology for competitive advantage. Her engagement focused on pricing strategy for a major Quick Service Restaurant chain.'
-  },
-  pricingdash: {
-    title: 'Proof-of-Concept Pricing Dashboard',
-    body:  'An interactive tool that lets the client\'s pricing team visualise their full menu-and-geography pricing architecture, model scenarios, and determine how to respond to competitors\' pricing moves — updated in near real time.'
-  },
-  esg: {
-    title: 'ESG — Environmental, Social & Governance',
-    body:  'ESG is a framework used by investors to evaluate companies beyond pure financial metrics. At HSBC, Claire evaluated 20+ ESG data providers and built a commercial client scorecard that shaped green-loan risk frameworks and informed multimillion-dollar investment decisions.'
-  },
-  savings200k: {
-    title: '$200K Annual Savings',
-    body:  'By redesigning HSBC\'s data pipeline tooling and presenting a compelling data story to senior leadership, Claire automated previously manual processes and secured organisational buy-in — generating roughly $200K in annual savings.'
-  },
-  algo: {
-    title: 'Client Resolution Algorithm',
-    body:  'Designed an algorithm that matched HSBC\'s internal client records to external data sources with 90%+ accuracy. This replaced expensive third-party vendor services, saved $200K+ annually, and improved data quality for downstream AI and analytics models.'
-  },
-  hackathon: {
-    title: '1st Place — Kellogg AI Hackathon',
-    body:  'Won first place in the inaugural Kellogg AI Club hackathon, competing against peers to rapidly prototype and deploy a practical AI application. Demonstrates the ability to combine technical execution with strategic product thinking under time pressure.'
-  },
-  triathlon: {
+
+  sport: {
+    icon: '👟',
     title: 'Endurance Athlete',
-    body:  'Claire competes in both triathlons (swim → bike → run) and marathons, requiring months of disciplined multi-sport training. The mental resilience and long-horizon thinking required by endurance sport mirrors her professional approach to complex, sustained challenges.'
+    html: `
+      <p>Claire competes in <strong>triathlons</strong> (swim &rarr; bike &rarr; run) and <strong>marathons</strong>, requiring months of disciplined multi-sport training.</p>
+      <p>She also dances. The focus and resilience built through endurance sport translate directly into her approach to long-horizon professional challenges.</p>`
   },
-  iot: {
-    title: 'AI Agents & IoT Devices',
-    body:  'In her spare time, Claire builds autonomous AI agents capable of browsing the web, writing code, and completing multi-step tasks. She also develops IoT (Internet of Things) devices that wire physical sensors and actuators to cloud services.'
+
+  esg: {
+    icon: '🌍',
+    title: 'ESG & Sustainability',
+    html: `
+      <p>A career thread running from university to banking:</p>
+      <ul>
+        <li>Evaluated <strong>20+ ESG data providers</strong> at HSBC, shaping multimillion-dollar investment decisions</li>
+        <li>Built a proof-of-concept <strong>ESG scorecard</strong> for commercial clients, adopted for green-loan regulatory compliance</li>
+        <li>Delivered the first internal view of <strong>environmental risk</strong> for 2,000+ HSBC commercial clients</li>
+        <li>Engineering Sustainability Team <strong>Executive Web Master</strong> at Queen's University</li>
+      </ul>`
+  },
+
+  data: {
+    icon: '📊',
+    title: 'Data Science & Analytics',
+    html: `
+      <p>Across consulting and banking, Claire has built, deployed, and communicated data systems at scale.</p>
+      <ul>
+        <li><strong>BCG:</strong> Pricing framework and proof-of-concept dashboard for a major QSR chain</li>
+        <li><strong>HSBC Data Scientist:</strong> Improved AI model accuracy by <strong>50%+</strong>, enabling 300 bankers to assess $50M+ client portfolios held with competitors</li>
+        <li><strong>HSBC Data Engineer:</strong> Client-resolution algorithm at <strong>90%+ accuracy</strong>, eliminating vendors and saving $200K+ annually</li>
+        <li><strong>Kellogg:</strong> Co-President, Data Analytics Club</li>
+      </ul>`
+  },
+
+  ai: {
+    icon: '🏆',
+    title: 'AI & Innovation',
+    html: `
+      <p>Won <strong>1st place</strong> in the Kellogg AI Club's inaugural hackathon — rapidly prototyping and deploying a practical AI application under time pressure.</p>
+      <p>As a hobbyist developer, Claire builds:</p>
+      <ul>
+        <li><strong>AI agents</strong> — autonomous systems that browse the web, write code, and complete multi-step tasks</li>
+        <li><strong>IoT devices</strong> — connecting physical sensors and actuators to cloud services</li>
+      </ul>`
+  },
+
+  research: {
+    icon: '📡',
+    title: 'Published Researcher',
+    html: `
+      <p>Published in <strong>IEEE</strong> during her MEng at the University of Toronto:</p>
+      <blockquote>"MARL to Choose Actions On-the-Fly in a Cognitive Radar System"</blockquote>
+      <p>The paper applies <strong>Multi-Agent Reinforcement Learning</strong> to cognitive radar — enabling radar agents to dynamically select optimal waveform actions in real time within complex, contested RF environments.</p>`
   }
+
 };
 
 
-// ─── Popup logic ──────────────────────────────────────────────────────────────
+// ─── Modal logic ──────────────────────────────────────────────────────────────
 
-const popup      = document.getElementById('popup');
-const popupTitle = document.getElementById('popup-title');
-const popupBody  = document.getElementById('popup-body');
+const overlay    = document.getElementById('overlay');
+const modalIcon  = document.getElementById('modal-icon');
+const modalTitle = document.getElementById('modal-title');
+const modalBody  = document.getElementById('modal-body');
 
-let hideTimer = null;
-
-function showPopup(kw) {
-  const data = POPUPS[kw.dataset.popup];
-  if (!data) return;
-
-  clearTimeout(hideTimer);
-
-  popupTitle.textContent = data.title;
-  popupBody.textContent  = data.body;
-
-  // Position popup vertically near the keyword
-  const rect     = kw.getBoundingClientRect();
-  const kwMidY   = rect.top + rect.height / 2;
-  const popupH   = popup.offsetHeight || 140;
-  const maxTop   = window.innerHeight - popupH - 12;
-  const top      = Math.max(12, Math.min(kwMidY - popupH / 2, maxTop));
-
-  popup.style.top = top + 'px';
-
-  kw.classList.add('active');
-  popup.classList.add('visible');
+function openModal(key) {
+  const d = POPUPS[key];
+  if (!d) return;
+  modalIcon.textContent  = d.icon;
+  modalTitle.textContent = d.title;
+  modalBody.innerHTML    = d.html;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
 }
 
-function hidePopup(kw) {
-  if (kw) kw.classList.remove('active');
-  hideTimer = setTimeout(() => popup.classList.remove('visible'), 120);
+function closeModal() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
 }
 
-document.querySelectorAll('.kw').forEach(kw => {
-  kw.addEventListener('mouseenter', () => showPopup(kw));
-  kw.addEventListener('mouseleave', () => hidePopup(kw));
-  // Touch support
-  kw.addEventListener('touchstart', (e) => {
-    e.preventDefault();
-    showPopup(kw);
-  }, { passive: false });
+// Open on item click
+document.querySelectorAll('.item').forEach(btn => {
+  btn.addEventListener('click', () => openModal(btn.dataset.popup));
 });
 
-// Keep popup open when hovering over it
-popup.addEventListener('mouseenter', () => clearTimeout(hideTimer));
-popup.addEventListener('mouseleave', () => hidePopup(null));
+// Close on X button
+document.getElementById('modal-close').addEventListener('click', closeModal);
+
+// Close on click outside the modal card
+overlay.addEventListener('click', e => {
+  if (e.target === overlay) closeModal();
+});
+
+// Close on Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
