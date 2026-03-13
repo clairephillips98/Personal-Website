@@ -27,31 +27,78 @@
   <!-- ── Scattered items ────────────────────────────────────────── -->
   <div class="items-layer">
 
-    <!-- Graduation Cap → Education -->
-    <button class="item" data-popup="education" style="top:9%;left:10%;--r:-8deg">
+    <!-- 1 · Graduation Cap → Education (top-left) -->
+    <button class="item" data-popup="education" style="top:7%;left:8%;--r:-8deg">
       <span class="item-icon">🎓</span>
       <span class="item-label">Education</span>
     </button>
 
-    <!-- Hardware Chip → Tech Skills -->
-    <button class="item" data-popup="tech" style="top:7%;left:67%;--r:6deg">
+    <!-- 2 · Wrench → Tinkering / AI (left, upper-mid) -->
+    <button class="item" data-popup="tinkering" style="top:23%;left:3%;--r:15deg">
+      <span class="item-icon">🔧</span>
+      <span class="item-label">Tinkering</span>
+    </button>
+
+    <!-- 3 · Running Shoe → Athlete (left, lower-mid) -->
+    <button class="item" data-popup="sport" style="top:63%;left:4%;--r:10deg">
+      <span class="item-icon">👟</span>
+      <span class="item-label">Athlete</span>
+    </button>
+
+    <!-- 4 · Bank → HSBC (bottom-left) -->
+    <button class="item" data-popup="hsbc" style="top:77%;left:21%;--r:-6deg">
+      <span class="item-icon">🏦</span>
+      <span class="item-label">HSBC</span>
+    </button>
+
+    <!-- 5 · Earth → ESG (bottom-center) -->
+    <button class="item" data-popup="esg" style="top:81%;left:46%;--r:4deg">
+      <span class="item-icon">🌍</span>
+      <span class="item-label">ESG</span>
+    </button>
+
+    <!-- 6 · Suited Person → BCG (bottom-right) -->
+    <button class="item" data-popup="bcg" style="top:75%;left:70%;--r:-5deg">
+      <span class="item-icon suit-icon">
+        <svg viewBox="0 0 56 64" xmlns="http://www.w3.org/2000/svg">
+          <!-- head -->
+          <ellipse cx="28" cy="11" rx="7.5" ry="8.5" fill="currentColor"/>
+          <!-- suit body -->
+          <path d="M10 62 L10 35 C10 28 16 24 20 22 L28 32 L36 22 C40 24 46 28 46 35 L46 62 Z" fill="currentColor"/>
+          <!-- left lapel cutout -->
+          <path d="M20 22 L17 35 L28 32 Z" style="fill:var(--card-bg)"/>
+          <!-- right lapel cutout -->
+          <path d="M36 22 L39 35 L28 32 Z" style="fill:var(--card-bg)"/>
+        </svg>
+      </span>
+      <span class="item-label">BCG</span>
+    </button>
+
+    <!-- 7 · Bar Chart → Analytics (right, mid) -->
+    <button class="item" data-popup="data" style="top:50%;left:84%;--r:3deg">
+      <span class="item-icon">📊</span>
+      <span class="item-label">Analytics</span>
+    </button>
+
+    <!-- 8 · Handshake → Internships (right, upper) -->
+    <button class="item" data-popup="internships" style="top:22%;left:80%;--r:-7deg">
+      <span class="item-icon">🤝</span>
+      <span class="item-label">Internships</span>
+    </button>
+
+    <!-- 9 · Hardware Chip → Tech Skills (top-right) -->
+    <button class="item" data-popup="tech" style="top:6%;left:66%;--r:6deg">
       <span class="item-icon chip-icon">
         <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-          <!-- body -->
           <rect x="17" y="17" width="30" height="30" rx="3" fill="currentColor"/>
-          <!-- top pins -->
           <rect x="23" y="7"  width="5" height="10" rx="2" fill="currentColor"/>
           <rect x="36" y="7"  width="5" height="10" rx="2" fill="currentColor"/>
-          <!-- bottom pins -->
           <rect x="23" y="47" width="5" height="10" rx="2" fill="currentColor"/>
           <rect x="36" y="47" width="5" height="10" rx="2" fill="currentColor"/>
-          <!-- left pins -->
           <rect x="7"  y="23" width="10" height="5" rx="2" fill="currentColor"/>
           <rect x="7"  y="36" width="10" height="5" rx="2" fill="currentColor"/>
-          <!-- right pins -->
           <rect x="47" y="23" width="10" height="5" rx="2" fill="currentColor"/>
           <rect x="47" y="36" width="10" height="5" rx="2" fill="currentColor"/>
-          <!-- inner recess -->
           <rect x="25" y="25" width="14" height="14" rx="2" fill="none" stroke-width="2.5" style="stroke:var(--card-bg)"/>
           <circle cx="32" cy="32" r="2.5" style="fill:var(--card-bg)"/>
         </svg>
@@ -59,32 +106,8 @@
       <span class="item-label">Tech</span>
     </button>
 
-    <!-- Running Shoe → Athlete -->
-    <button class="item" data-popup="sport" style="top:73%;left:7%;--r:12deg">
-      <span class="item-icon">👟</span>
-      <span class="item-label">Athlete</span>
-    </button>
-
-    <!-- Earth → ESG -->
-    <button class="item" data-popup="esg" style="top:72%;left:73%;--r:-5deg">
-      <span class="item-icon">🌍</span>
-      <span class="item-label">ESG</span>
-    </button>
-
-    <!-- Bar Chart → Analytics -->
-    <button class="item" data-popup="data" style="top:38%;left:83%;--r:3deg">
-      <span class="item-icon">📊</span>
-      <span class="item-label">Analytics</span>
-    </button>
-
-    <!-- Trophy → AI & Awards -->
-    <button class="item" data-popup="ai" style="top:5%;left:39%;--r:-4deg">
-      <span class="item-icon">🏆</span>
-      <span class="item-label">AI&nbsp;&amp;&nbsp;Awards</span>
-    </button>
-
-    <!-- Satellite Dish → Research -->
-    <button class="item" data-popup="research" style="top:44%;left:3%;--r:9deg">
+    <!-- 10 · Satellite Dish → Research (top-center) -->
+    <button class="item" data-popup="research" style="top:4%;left:39%;--r:9deg">
       <span class="item-icon">📡</span>
       <span class="item-label">Research</span>
     </button>

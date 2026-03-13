@@ -138,8 +138,9 @@ html, body {
   display: block;
 }
 
-/* Chip SVG container — same visual size as emoji */
-.chip-icon {
+/* Chip & suit SVG containers — same visual size as emoji */
+.chip-icon,
+.suit-icon {
   width: 2.1rem;
   height: 2.1rem;
   display: flex;
@@ -147,7 +148,8 @@ html, body {
   justify-content: center;
 }
 
-.chip-icon svg {
+.chip-icon svg,
+.suit-icon svg {
   width: 100%;
   height: 100%;
   color: var(--chip-fill);
@@ -300,7 +302,7 @@ html, body {
     position: static;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
     gap: 0.85rem;
     justify-content: center;
     pointer-events: all;
